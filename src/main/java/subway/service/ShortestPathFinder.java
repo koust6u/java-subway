@@ -10,15 +10,29 @@ import java.util.List;
 
 public class ShortestPathFinder {
 
-    public Integer calculateShortestPath(String source, String destination){
+
+    public List<String> getVertexListOfShortestPath(String source,String destination){
         DijkstraShortestPath dijkstraShortestPath = new DijkstraShortestPath(DistanceGraphInitializer.graph);
-        List<String> vertexList = dijkstraShortestPath.getPath(source, destination).getVertexList();
+        return dijkstraShortestPath.getPath(source, destination).getVertexList();
+    }
+
+    public Integer calculateShortestPath(List<String>vertexList){
+        return summationOfTotalDistance(vertexList);
+    }
+    public Integer calculateDistanceByTime(List<String> vertexList){
         return summationOfTotalDistance(vertexList);
     }
 
-    public Integer calculateShortestTime(String source, String destination){
+    public List<String> getVertexListOfShortestTime(String source,String destination){
         DijkstraShortestPath dijkstraShortestPath =new DijkstraShortestPath(DurationGraphInitializer.graph);
-        List<String> vertexList = dijkstraShortestPath.getPath(source, destination).getVertexList();
+        return dijkstraShortestPath.getPath(source, destination).getVertexList();
+    }
+
+
+    public Integer calculateShortestTime(List<String> vertexList){
+        return summationOfTotalDuration(vertexList);
+    }
+    public Integer calculateTimeByDistance(List<String> vertexList){
         return summationOfTotalDuration(vertexList);
     }
 

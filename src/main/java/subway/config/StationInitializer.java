@@ -29,6 +29,9 @@ public class StationInitializer {
                 = new Station("남부터미널역",new NextStation(yangJaeStation,6,5));
         Station educationalStation
                 = new Station("교대역", new NextStation(nambuTerminalStation,3,2));
+        StationRepository.addStation(educationalStation);
+        StationRepository.addStation(nambuTerminalStation);
+        StationRepository.addStation(maeBongStation);
     }
 
     public void initializeNewBundangLine(){
@@ -36,5 +39,8 @@ public class StationInitializer {
         Station yangjaeStation
                 = new Station("양재역", new NextStation(yangjaeCitizenForestStation,10,3));
         Station gangnamStation = new Station("강남역", new NextStation(yangjaeStation,2,8));
+        StationRepository.addStation(gangnamStation);
+        StationRepository.addStation(yangjaeStation);
+        StationRepository.addStation(yangjaeCitizenForestStation);
     }
 }

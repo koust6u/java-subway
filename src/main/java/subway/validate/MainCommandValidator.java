@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 import static subway.constant.ErrorConstant.MAIN_COMMAND_ERROR;
+import static subway.constant.ViewConstant.COMMAND_NOTIFICATION_MESSAGE;
+import static subway.constant.ViewConstant.TARGET_FUNCTION_MESSAGE;
 
 public class MainCommandValidator extends Validator {
 
@@ -16,7 +18,16 @@ public class MainCommandValidator extends Validator {
 
     @Override
     protected MainCommand errorHandle() {
-        return inputView.selectFunctionCommand();
+        return selectFunctionCommand();
+    }
+
+    public MainCommand selectFunctionCommand(){
+        System.out.println(COMMAND_NOTIFICATION_MESSAGE);
+        System.out.println(TARGET_FUNCTION_MESSAGE);
+        String inputCommand = scanner.nextLine();
+        System.out.println();
+
+        return this.template(inputCommand);
     }
 
     private void isValidCommandType(String input) {

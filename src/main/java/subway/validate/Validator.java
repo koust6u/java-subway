@@ -6,14 +6,11 @@ import java.util.Scanner;
 
 public abstract class Validator {
 
-    private Scanner scanner;
-    protected final InputView inputView;
+    protected Scanner scanner;
     private static final String ERROR_PREFIX = "\n[ERROR] ";
 
     public Validator(Scanner scanner){
         this.scanner = scanner;
-        inputView = new InputView(scanner);
-
     }
     protected abstract<T> T validate(String input);
 

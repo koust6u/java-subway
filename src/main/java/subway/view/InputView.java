@@ -15,9 +15,7 @@ public class InputView {
 
     private final Scanner scanner;
     private final Validator mainCommandValidator;
-
     private final Validator standardCommandValidator;
-
     private final Validator stationValidator;
 
     public InputView(Scanner scanner) {

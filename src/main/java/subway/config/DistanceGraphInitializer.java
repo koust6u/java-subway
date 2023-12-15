@@ -13,6 +13,7 @@ public class DistanceGraphInitializer {
         edgeInitialize();
     }
     private void vertexInitialize() {
+        graph.addVertex("종점");
         StationRepository.stations()
                 .stream()
                 .filter(this::isNotInserted)
