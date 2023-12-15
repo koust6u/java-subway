@@ -1,4 +1,4 @@
-package subway.view.constant;
+package subway.constant;
 
 public interface ViewConstant {
 
@@ -11,7 +11,7 @@ public interface ViewConstant {
     String PATH_STANDARD_MESSAGE = "## 경로 기준\n" +
             "1. 최단 거리\n" +
             "2. 최소 시간\n" +
-            "B. 돌아가기";
+            "B. 돌아가기\n";
 
     String STARTING_POINT_MESSAGE = "## 출발역을 입력하세요.";
 
