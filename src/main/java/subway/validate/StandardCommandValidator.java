@@ -10,6 +10,10 @@ public class StandardCommandValidator extends Validator{
     public StandardCommandValidator(Scanner scanner) {
         super(scanner);
     }
+    @Override
+    protected StandardCommand errorHandle() {
+        return inputView.selectPathStandardCommand();
+    }
 
 
     private StandardCommand isValidCommand(String input){

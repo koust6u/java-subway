@@ -14,6 +14,11 @@ public class MainCommandValidator extends Validator {
         super(scanner);
     }
 
+    @Override
+    protected MainCommand errorHandle() {
+        return inputView.selectFunctionCommand();
+    }
+
     private void isValidCommandType(String input) {
         if (!input.equals("1") && !input.equals("Q")) {
             throw new IllegalArgumentException(MAIN_COMMAND_ERROR);
